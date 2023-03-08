@@ -18,7 +18,7 @@ parameters:
     - publish 
 
 steps:
-  - task: DotNetCoreCLI@2
+  - task: DotNetCoreCLI@1
     inputs:
       command: ${{ parameters.image }}
       
