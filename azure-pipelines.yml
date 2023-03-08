@@ -22,6 +22,6 @@ parameters:
 steps:
   - task: DotNetCoreCLI@2
     inputs:
-      command: ${{ parameters.default }}
+      command: ${{ parameters.image }}
       projects:  src/other/other.sln 
       
