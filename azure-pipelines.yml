@@ -17,8 +17,6 @@ parameters:
     - pack
     - publish 
 
-  
-
 steps:
   - task: DotNetCoreCLI@2
     inputs:
