@@ -1,0 +1,27 @@
+---
+pool: 
+  Vmimage: 'ubuntu-latest'
+  name: dotnet-sdk
+
+trigger: 
+  - develop
+
+parameters:
+- name: image
+  displayName: dotnet
+  type: string
+  default: build
+  values:
+    - build
+    - push
+    - pack
+    - publish 
+
+  
+
+steps:
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: ${{ parameters.default }}
+      projects:  src/other/other.sln 
+      publishWebProjects:true
