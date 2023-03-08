@@ -1,7 +1,7 @@
 ---
-pool: 
-  Vmimage: 'ubuntu-latest'
-  name: dotnet-sdk
+pool:
+  name: "Azure Pipelines" 
+  vmImage: 'ubuntu-latest'
 
 trigger: 
   - develop
